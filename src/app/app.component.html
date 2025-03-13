@@ -1,0 +1,142 @@
+<div class="container">
+  <div>
+    <button mat-raised-button class="profilebutton">Create a Profile</button>
+  </div>
+  <mat-divider class="divider"></mat-divider> 
+
+  <mat-tab-group (selectedTabChange)="onTabChange($event)">
+    <!-- Your Experience Tab -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="tab-icon">assignment</mat-icon> Your Experience
+      </ng-template>
+      <form>
+        <!-- Form content here -->
+      </form>
+    </mat-tab>
+  
+    <!-- Upload CV Tab -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="tab-icon">cloud_upload</mat-icon> Upload CV
+      </ng-template>
+      <input type="file" />
+    </mat-tab>
+  </mat-tab-group> 
+
+  <mat-divider></mat-divider> 
+
+  <div *ngIf="yourExperience">
+    <div class="experience-container">
+      <!-- Checkbox and Text -->
+      <div class="experience-text">
+        <mat-checkbox></mat-checkbox>
+        <span>Please add your Professional Experience</span>
+      </div>
+    
+      <!-- Button -->
+      <button mat-raised-button color="primary">Add Experience</button>
+    </div>
+  
+    <mat-accordion class="experience-accordion">
+      <mat-expansion-panel expanded="true">
+        <!-- Header Section -->
+        <mat-expansion-panel-header class="custom-header">
+          <mat-panel-title>
+            <span class="job-title">1st Grade Teacher at</span> 
+            <span class="separator">&#124;</span>
+            <span class="job-title">Algosys</span>
+          </mat-panel-title>
+          <div class="delete-icon">
+            <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-expansion-panel-header>
+    
+        <!-- Job Title Input -->
+        <mat-form-field appearance="outline" class="full-width" appearance="fill">
+          <mat-label>Job Title *</mat-label>
+          <input matInput placeholder="Enter Job Title">
+        </mat-form-field>
+    
+        <!-- Company Name Input -->
+        <mat-form-field appearance="outline" class="full-width" appearance="fill">
+          <mat-label>Company Name *</mat-label>
+          <input matInput placeholder="Enter Company Name">
+        </mat-form-field>
+    
+
+        <div class="type-checkbox-container">
+          <!-- Job Type Selection -->
+          <mat-form-field appearance="outline" class="job-type-field" appearance="fill">
+            <mat-label>Type *</mat-label>
+            <mat-select>
+              <mat-option value="full-time">Full-time</mat-option>
+              <mat-option value="part-time">Part-time</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Checkbox -->
+          <div class="checkbox-container">
+            <mat-checkbox>I am currently working here</mat-checkbox>
+          </div>
+        </div>
+
+    
+        <!-- Job Date Fields -->
+        <div class="date-container">
+          <mat-form-field appearance="outline" class="startdata" appearance="fill">
+            <mat-label>Job Start Date *</mat-label>
+            <input matInput [matDatepicker]="picker1">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline" class="enddate" appearance="fill">
+            <mat-label>Job End Date *</mat-label>
+            <input matInput [matDatepicker]="picker2">
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+    
+        <!-- Workplace Type -->
+        <div class="workplace-type">
+          <span class="workplace-label">
+            <mat-icon>compare_arrows</mat-icon> Workplace Type
+          </span>
+          <div class="workplace-buttons">
+            <button mat-button [ngClass]="{'selected': selectedWorkplace === 'remote'}" (click)="selectWorkplace('remote')">
+              Remote
+            </button>
+            <button mat-button [ngClass]="{'selected': selectedWorkplace === 'onsite'}" (click)="selectWorkplace('onsite')">
+              Onsite
+            </button>
+            <button mat-button [ngClass]="{'selected': selectedWorkplace === 'hybrid'}" (click)="selectWorkplace('hybrid')">
+              Hybrid
+            </button>
+          </div>
+        </div>
+
+    
+        <!-- Job Description -->
+        <div class="jobdescription">
+          <span class="workplace-label">
+            <mat-icon>work</mat-icon> Job Description
+          </span>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Job Description</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+
+        <div class="save-clearbuttons">
+          <button mat-raised-button color="primary">Save</button>
+          <button mat-button color="warn">Clear</button>
+        </div>
+    
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

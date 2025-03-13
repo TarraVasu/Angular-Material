@@ -1,0 +1,134 @@
+.container {
+    /* max-width: 600px; */
+    /* margin: auto; */
+    padding: 20px;
+  }
+
+.profilebutton{
+    background-color: #05D0EB !important;
+    color: #FFFFFF !important;
+} 
+
+.tab-icon {
+    margin-right: 8px;
+    color: #4A90E2; /* Customize icon color */
+  }
+
+
+  .divider {
+    border: 1px solid #ddd; /* Light grey line */
+    margin: 16px 0;
+  }
+
+  .experience-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+  }
+  
+  .experience-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .experience-text mat-checkbox {
+    margin-right: 8px;
+  }
+  
+  button {
+    white-space: nowrap; /* Prevents button text from wrapping */
+  }
+
+  .experience-accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .enddate,
+  .startdata{
+    flex: 1;
+  }
+  
+  mat-checkbox {
+    margin-left: 10px;
+  }
+  
+  .workplace-type {
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .workplace-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .workplace-buttons button {
+    background-color: #d3d3d3;
+  }
+  
+  .workplace-buttons button.selected {
+    background-color: #3f51b5; /* Primary color */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .job-title {
+    font-weight: bold;
+  }
+  .separator {
+    margin: 0 10px;
+    color: gray;
+  }
+
+  .custom-header{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+    justify-content: space-between;
+  }
+
+  .type-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between elements */
+    width: 100%; /* Ensures full width usage */
+  }
+  
+  .job-type-field, 
+  .checkbox-container {
+    flex: 1; /* Both elements take equal space */
+  }
+  .workplace-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .jobdescription{
+    margin-top: 30px;
+  }
+
+.save-clearbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
