@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     AppComponent
@@ -38,7 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatIconModule,
     MatDividerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

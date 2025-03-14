@@ -9,6 +9,7 @@ export class AppComponent {
   yourExperience: boolean = true; 
   jobType: string = 'part-time';
   selectedWorkplace: string = 'hybrid';
+  jobDescription: string = ''; 
 
   onTabChange(event: any) {
     this.yourExperience = event.index === 0;

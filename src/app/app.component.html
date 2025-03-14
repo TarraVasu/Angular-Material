@@ -125,10 +125,7 @@
           <span class="workplace-label">
             <mat-icon>work</mat-icon> Job Description
           </span>
-          <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Job Description</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
+          <quill-editor [(ngModel)]="jobDescription"></quill-editor>
         </div>
 
         <div class="save-clearbuttons">
