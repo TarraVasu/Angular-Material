@@ -23,4 +23,4 @@ jobs:
          run: npm install --legacy-peer-deps
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+         run: npx ng build --configuration production
